@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Estilo.css" />
+    <title>Cadastro Servidor</title>
+  </head>
+  <body>
+    <div class="ContainerLogo2">
+      <img
+        src="C:\Users\moyse\Downloads\logoMedHelper (1)_updated.png"
+        alt="logo"
+        class="img"
+      />
+    </div>
+
+    <div class="ContainerCad center">
+      <div class="h1">
+        <h1 class="center">Criar conta</h1>
+      </div>
+
+      <div class="IrLogin2 center">
+        <h5>Ja possui uma conta?</h5>
+        <a href="Login.html">Fazer login. </a>
+      </div>
+
+      <div class="row progress">
+        <div class="progess-point point-selected"></div>
+        <div class="progess-point point-off"></div>
+        <div class="progess-point point-off"></div>
+      </div> 
+      
+        <form action="Cadastro.php" class="StepForm">
+            <div id="Etapa_1" class="Etapa">
+              <div id="h5">
+                <h5>Você está cadastrando-se <br />como servidor!</h5>
+              </div>
+              <div class="inputAlign">
+                <fieldset class="fieldset fieldsetEspacoBottom">
+                  <legend class="legend">Nome</legend>
+                  <input class="input input-login" type="text" name="nome" id="nome" />
+                </fieldset>
+
+                <fieldset class="fieldset fieldsetEspacoBottom">
+                  <legend class="legend">Email</legend>
+                  <input class="input input-login" type="text" name="email" id="email" />
+                </fieldset>
+
+                <div class="row">
+                  <fieldset class="fieldset-Cadastro">
+                    <legend class="legend">Telefone</legend>
+                    <input
+                      class="input input-cadastro"
+                      type="text"
+                      name="telefone"
+                      id="telefone"
+                    />
+                  </fieldset>
+
+                  <fieldset class="fieldset-Cadastro">
+                    <legend class="legend">Usuário</legend>
+                    <input
+                      class="input input-cadastro"
+                      type="text"
+                      name="usuario"
+                      id="usuario"
+                    />
+                  </fieldset>
+                </div>
+                 </div>
+              </div>
+            
+            
+          
+        </form>
+        <div class="row" id="escolher">
+        
+          <div class="btnContainer center" >
+            <button class="btn" type="button" id="btnAvançar">Avançar</button>
+          </div>
+
+          <div class="btnContainer center" >
+            <button class="btn Voltar" type="button" id="btnVoltar">Voltar</button>
+          </div>
+        
+      </div>
+        
+      </div>
+    </div>
+
+    <script src="js/pages/Cadastro/Cadastro_Servidor.js"></script>
+
+     
+  </body>
+</html>
