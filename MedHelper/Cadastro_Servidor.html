@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="Estilo.css" />
-    <title>Cadastro Servidor</title>
+    <title>Cadastro</title>
   </head>
+
   <body>
     <div class="ContainerLogo2">
       <img
@@ -14,83 +15,114 @@
         class="img"
       />
     </div>
-
     <div class="ContainerCad center">
-      <div class="h1">
-        <h1 class="center">Criar conta</h1>
-      </div>
+        <div>
+          <h1 class="h1-CriarConta">Criar conta</h1>
+        </div>
 
-      <div class="IrLogin2 center">
-        <h5>Ja possui uma conta?</h5>
-        <a href="Login.html">Fazer login. </a>
-      </div>
+        <div class="IrLogin center">
+          <h5>Ja possui uma conta?</h5>
+          <a href="Login.html">Fazer login. </a>
+        </div>
 
-      <div class="row progress">
-        <div class="progess-point point-selected"></div>
-        <div class="progess-point point-off"></div>
-        <div class="progess-point point-off"></div>
-      </div> 
-      
-        <form action="Cadastro.php" class="StepForm">
-            <div id="Etapa_1" class="Etapa">
-              <div id="h5">
-                <h5>Você está cadastrando-se <br />como servidor!</h5>
-              </div>
-              <div class="inputAlign">
-                <fieldset class="fieldset fieldsetEspacoBottom">
-                  <legend class="legend">Nome</legend>
-                  <input class="input input-login" type="text" name="nome" id="nome" />
-                </fieldset>
+        <form action="Conexao.php">
+          <div id="h5">
+            <h5>Você está cadastrando-se <br />como servidor!</h5>
+          </div>
 
-                <fieldset class="fieldset fieldsetEspacoBottom">
-                  <legend class="legend">Email</legend>
-                  <input class="input input-login" type="text" name="email" id="email" />
-                </fieldset>
+          <div class="two-columns">
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+              <legend class="legend">Nome</legend>
+              <input
+                class="input input-cadastro"
+                type="text"
+                name="nome"
+                id="nome"
+              />
+            </fieldset>
 
-                <div class="row">
-                  <fieldset class="fieldset-Cadastro">
-                    <legend class="legend">Telefone</legend>
-                    <input
-                      class="input input-cadastro"
-                      type="text"
-                      name="telefone"
-                      id="telefone"
-                    />
-                  </fieldset>
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+              <legend class="legend">Email</legend>
+              <input
+                class="input input-cadastro"
+                type="text"
+                name="email"
+                id="email"
+              />
+            </fieldset>
 
-                  <fieldset class="fieldset-Cadastro">
-                    <legend class="legend">Usuário</legend>
-                    <input
-                      class="input input-cadastro"
-                      type="text"
-                      name="usuario"
-                      id="usuario"
-                    />
-                  </fieldset>
-                </div>
-                 </div>
-              </div>
+
             
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+              <legend class="legend">Usuário</legend>
+              <input
+                class="input input-cadastro"
+                type="text"
+                name="usuario"
+                id="usuario"
+              />
+            </fieldset>
+
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+              <legend class="legend">Telefone</legend>
+              <input
+                class="input input-cadastro"
+                type="text"
+                name="telefone"
+                id="telefone"
+              />
+            </fieldset>
+          </div>
+
+          <div class="center">
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+                <legend class="legend">Cód. Siape</legend>
+                <input
+                  class="input input-cadastro"
+                  type="text"
+                  name="siape"
+                  id="siape"
+                />
+              </fieldset>
+          </div>
+
+          <div class="center">
+            <div class="line"></div>
+          </div>
+
+          <div class="two-columns fieldsetEspacoBottom fieldsetEspacoTop2">
             
-          
+
+            <fieldset class="fieldset-Cadastro" >
+                <legend class="legend">Senha</legend>
+                <input
+                  class="input input-cadastro"
+                  type="text"
+                  name="senha"
+                  id="senha"
+                />
+              </fieldset>
+
+            <fieldset class="fieldset-Cadastro">
+                <legend class="legend">Confirmar senha</legend>
+                <input
+                  class="input input-cadastro"
+                  type="text"
+                  name="confirma-senha"
+                  id="confirma-senha"
+                />
+              </fieldset>
+          </div>
+
+          <div class="center" id="escolher">
+              <button class="btn Voltar" type="button">
+                Criar conta
+              </button>
+          </div>
         </form>
-        <div class="row" id="escolher">
-        
-          <div class="btnContainer center" >
-            <button class="btn" type="button" id="btnAvançar">Avançar</button>
-          </div>
-
-          <div class="btnContainer center" >
-            <button class="btn Voltar" type="button" id="btnVoltar">Voltar</button>
-          </div>
-        
       </div>
-        
-      </div>
-    </div>
 
-    <script src="js/pages/Cadastro/Cadastro_Servidor.js"></script>
+    <script src=""></script>
 
-     
   </body>
 </html>
