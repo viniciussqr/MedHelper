@@ -1,3 +1,3 @@
 document.getElementById("btnPerfil").addEventListener("click", function () {
-    window.location.href = "Perfil.html";
+    window.location.href = "perfil.html";
   });
