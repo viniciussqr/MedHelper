@@ -1,0 +1,600 @@
+@font-face {
+  font-family: 'Inter SemiBold';
+  src: url(Inter-SemiBold.woff); 
+}
+
+@font-face {
+  font-family: 'Inter Regular';
+  src: url(Inter-Regular.woff);
+}
+
+@font-face {
+  font-family: 'Inter Medium';
+  src: url(Inter-Medium.woff);
+}
+
+body {
+  margin: 0px;
+  background: linear-gradient(to top, #001427, #004A8D, #001427);
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.img{
+  height: 170px;
+  left: 320px;
+}
+
+h1 {
+  font-family: 'Inter SemiBold';
+  font-size: 80px;
+  color: #004a8d;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  
+}
+
+.h1-Login{
+  margin-top: -10px;
+}
+
+h5 {
+  font-family: 'Inter Regular';
+  font-size: 18px;
+  color: #525252;
+  
+}
+
+a{
+  font-size: 18px;
+  font-family: 'Inter SemiBold';
+  text-decoration: none;
+  color: #004a8d;
+  margin-left: 5px;  
+}
+
+legend{
+  font-size: 22px;
+  font-family:'Inter Regular';
+  
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.fieldset{
+  border: 1px solid #000000;
+  border-radius: 6px;
+  height:45px;
+  width: 420px;
+}
+
+.fieldsetEspacoBottom{
+  margin-bottom: 20px;
+}
+
+.fieldsetEspacoTop{
+  margin-top: 40px;
+}
+
+.input {
+  height: 20px;
+  border: 0px solid #000000;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background-color: transparent;
+  font-size: 17px;
+  font-family: 'Inter Regular';
+  margin-left: 7px;  
+}
+
+.input-login{
+width: 390px;
+}
+
+.ContainerLog {
+  z-index: 1;
+  border: 0px solid #000000;
+  background-color: #ffffff;
+  width: 50%;
+  height: 633px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  float: right;
+}
+
+.AjudaSenha {
+  margin-top: 10px;
+}
+
+.btnEntrar {
+  height: 47px;
+  width: 330px;
+  background-color: #004a8d;
+  border: 0px solid #000000;
+  border-radius: 5px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-family: 'Inter SemiBold';
+  font-weight: bold;
+}
+
+.AjudaConta {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -20px;
+
+}
+
+.btnContainerEntrar{
+  margin-top: 45px;
+}
+
+
+.ContainerLogo{
+  width: 50%;
+  height: 633;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
+
+/* CADASTRO */
+
+.ContainerLogo2{
+  width: 50%;
+  height: 633;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
+
+.ContainerCad {
+  border: 0px solid #000000;
+  background-color: #ffffff;
+  width: 50%;
+  height: 633px; 
+  flex-direction: column;
+}
+
+.IrLogin{
+  display: flex;
+  flex-direction: row;
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+
+h2{
+  font-family:'Inter Regular';
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+
+.btn{
+  height: 47px;
+  width: 270px;
+  background-color: #004a8d;
+  border: 0px solid #000000;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: 'Inter SemiBold';
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnContainer{
+  margin: 0px 30px;
+  margin-bottom: 30px;
+}
+
+#h2{
+  margin-bottom: -50px;
+}
+
+/* CADASTRO SERVIDOR E MEDICO */
+
+.h1{
+  position: relative;
+  top: 5px;
+}
+
+.IrLogin2{
+  display: flex;
+  flex-direction: row;
+  margin-top: -35px;
+  position: relative;
+  bottom: 0%;
+
+} 
+
+/* .progress{
+  position: relative;
+  top: -12px;
+}
+
+.progess-point{
+  width: 20px;
+  margin: 0px 5px;
+
+}
+
+.point-selected{
+  background-image: url('C:\\Users\\moyse\\.vscode\\MedHelper\\assets\\images\\Ellipse 19.png');
+  background-repeat: no-repeat;
+  position: relative;
+  bottom: 3px;
+  height: 20px;
+}
+
+.point-off{
+  background-image: url('C:\\Users\\moyse\\.vscode\\MedHelper\\assets\\images\\Ellipse 15.png');
+  background-repeat: no-repeat;
+  height: 15px;
+}
+ */
+
+.input-cadastro{
+  width: 256px;
+}
+
+.input-cadastro2{
+  width: 150px;
+}
+
+.two-columns{
+  flex-direction: column;
+  columns: 2;
+  
+  
+}
+
+.fieldset-Cadastro{
+  border: 1px solid #000000;
+  border-radius: 5px;
+  height: 45px;
+  width: 280px;
+ /*  position: relative;
+  right: 8px; */
+ 
+}
+
+.fieldset-Cadastro2{
+  border: 1px solid #000000;
+  border-radius: 5px;
+  height: 45px;
+  width: 180px;
+}
+
+.fieldsetEspacoBottom2{
+  margin-bottom: 10px;
+}
+
+.fieldsetEspacoTop2{
+  margin-top: 10px;
+}
+
+.form{
+  margin-top: -20px;
+}
+
+#h5{
+  margin-bottom: -20px;
+  margin-top: -80px;
+  position: relative;
+  left: 8px; 
+}
+
+#escolher{
+  margin-top: 40px;
+}
+
+
+
+#fieldset-nome{
+  margin-top: 112px;
+}
+
+#fieldset-senha{
+  margin-top: 71px;
+}
+
+.line{
+  background-image: url(../MedHelper/images/LineCadastro.png);
+  height: 1px;
+  width: 400px;
+  margin-top: 10px;
+}
+
+
+
+/* HOME */
+
+.background{
+  background-image: url(../MedHelper/images/UniversityOfMichigan.jpg);  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.sombra{
+  background-color: rgb( 0, 0, 0, 0.25);
+  width: 100%;
+  height: 100vh
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  padding: 20px 40px;
+}
+
+.esquerda{
+  width: 50%;
+}
+
+.direita{ 
+  width: 50%;
+}
+
+.logo{
+  height: 120px;
+  float: left;
+}
+
+.botao3{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-top: 35px;
+}
+
+.imgBotao3{
+  padding-left: 20px;
+  height: 45px;
+  margin-bottom: 5px;
+}
+
+.lblBotao3{
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.botao2{
+  background-color: rgb(0, 74, 141, 0.75);
+  border: 3px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.imgBotao2{
+  height: 45px;
+  margin-bottom: 2px;
+}
+
+.lblBotao2{
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Home{
+  border-radius: 80px;
+  width: 90px;
+  height: 90px; 
+  position: relative;
+  top: 120px;
+ 
+}
+
+.atendimento-home {
+ height: 50px;
+ position: relative;
+ right: 25px;
+top: 181px;
+
+}
+
+#Atendimentos{
+  border-radius: 80px;
+  width: 130px;
+  height: 130px;
+  position: relative;
+  right: 60px;
+  top: 258px; 
+
+}
+
+.perfil-home{
+  height: 40px;
+  position: relative;
+  top: 66px;
+  left: 20px; 
+ 
+} 
+
+#btnPerfil{
+  border-radius: 80px;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  top: 9px;
+  left: 45px;
+
+} 
+
+.estoque-home{
+  height: 40px;
+  position: relative;
+  top: 150px;
+  left: 123px;
+}
+
+#Estoque{
+  border-radius: 80px;
+  width: 100px;
+  height: 100px; 
+  position: relative;
+  top: 175px;
+  left: 125px;
+}
+
+.notificacoes-home{
+  height: 100px;
+  position: relative;
+  top: 40px;
+  right: 177px;
+}
+
+#Notificações{
+  border-radius: 80px;
+  width: 120px;
+  height: 120px; 
+  position: relative;
+  right: 198px;
+  bottom: 53px;
+
+}
+
+.main{
+  width: 100%;
+  height: auto;
+}
+
+/* PERFIL */
+
+.header-left{
+  position: relative;
+  right: 15%;
+  
+}
+
+li{
+  margin: 0px 20px;
+  list-style: none;
+
+} 
+
+#ul{
+  position: relative;
+  right: 8%;
+} 
+
+.section{
+  width: auto;
+  height: auto;
+}
+
+.button-nav{
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.container-foto{
+  width: 400px;
+  height: 440px;
+  background-color: rgb( 0, 74, 141, 0.75);
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin: 0px 20px;
+  
+}
+
+.container-informaçoes{
+  width: 600px;
+  height: 440px;
+  background-color: rgb( 0, 74, 141, 0.75);
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin: 0px 20px;
+  flex-direction: column;
+  
+  
+}
+
+.container-informaçoes .fieldset-Cadastro .input-cadastro{
+  width: 230px;
+
+}
+
+.container-informaçoes .fieldset-Cadastro legend{
+  color: #ffffff;
+}
+
+.container-informaçoes .fieldset-Cadastro{
+  width: 200px;
+  border-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.container-informaçoes .botao3{
+  position: relative;
+  left: 250px;
+}
+
+.container-informaçoes .botao3 .imgBotao3{
+  height: 30px;
+}
+
+.container-informaçoes .botao4 .imgBotao3{
+  height: 30px;
+}
+
+.container-informaçoes .center{
+  position: relative;
+  left: 207px;
+}
+
+.container-informaçoes .two-columns{
+  margin: 20px 0px;
+}
+
+.botao4{
+  background-color: transparent;
+  border: none;
+}
+
+.imgBotao4{
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.lblBotao3{
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btnLabel{
+  color: #ffffff;
+  font-size: 20px;
+}
+
+
