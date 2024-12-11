@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/estilo.css" />
+    <title>Cadastro do Servidor</title>
+  </head>
+
+  <body>
+    <div class="ContainerLogo2">
+      <img
+        src="Assets/Images/logo-branca.png"
+        alt="logo"
+        class="img"
+      />
+    </div>
+    <div class="ContainerCad center">
+        <div>
+          <h1 class="h1-CriarConta">Criar conta</h1>
+        </div>
+
+        <div class="IrLogin center">
+          <h5>Ja possui uma conta?</h5>
+          <a href="login-servidor.html">Fazer login. </a>
+        </div>
+
+        <form action="cadastro-servidor.php" method="post" id="formCadastroServidor">
+          <div id="h5">
+            <h5>Você está cadastrando-se <br />como servidor!</h5>
+          </div>
+
+          <div class="two-columns">
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+              <legend class="legend">Nome</legend>
+              <input
+                class="input input-cadastro"
+                type="text"
+                name="nome"
+                id="nome"
+              />
+            </fieldset>
+
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+              <legend class="legend">Email</legend>
+              <input
+                class="input input-cadastro"
+                type="text"
+                name="email"
+                id="email"
+              />
+            </fieldset>
+
+
+            
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+              <legend class="legend">Usuário</legend>
+              <input
+                class="input input-cadastro"
+                type="text"
+                name="usuario"
+                id="usuario"
+              />
+            </fieldset>
+
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+              <legend class="legend">Telefone</legend>
+              <input
+                class="input input-cadastro"
+                type="text"
+                name="telefone"
+                id="telefone"
+              />
+            </fieldset>
+          </div>
+
+          <div class="center">
+            <fieldset class="fieldset-Cadastro fieldsetEspacoBottom2">
+                <legend class="legend">Cód. Siape</legend>
+                <input
+                  class="input input-cadastro"
+                  type="text"
+                  name="siape"
+                  id="siape"
+                />
+              </fieldset>
+          </div>
+
+          <div class="center">
+            <div class="line"></div>
+          </div>
+
+          <div class="two-columns fieldsetEspacoBottom fieldsetEspacoTop2">
+            
+
+            <fieldset class="fieldset-Cadastro" >
+                <legend class="legend">Senha</legend>
+                <input
+                  class="input input-cadastro"
+                  type="text"
+                  name="senha"
+                  id="senha"
+                />
+              </fieldset>
+
+            <fieldset class="fieldset-Cadastro">
+                <legend class="legend">Confirmar senha</legend>
+                <input
+                  class="input input-cadastro"
+                  type="text"
+                  id="confirmarSenha"
+                />
+              </fieldset>
+          </div>
+
+          <div class="center" id="escolher">
+              <button class="btn Voltar" type="submit">
+                Criar conta
+              </button>
+          </div>
+        </form>
+      </div>
+      <script src="Assets/JS/cadastro-servidor.js"></script>
+  </body>
+</html>
