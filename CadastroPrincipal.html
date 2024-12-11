@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Estilo.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <!--  <script>
+
+      function CadastraUsuario() {
+          var nome = document.getElementById('nome').value;
+          var email = document.getElementById('email').value;
+          var siape = document.getElementById('siape').value;
+          var senha = document.getElementById('senha').value;
+          var usuario = document.getElementById('usuario').value;
+          var confSenha = document.getElementById('confirma-senha').value;
+
+          // Enviar dados usando Fetch API
+          fetch('Conexao.php', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded',
+              },
+              body: nome=${nome}&email=${email}
+          })
+          .then(response => response.json())
+          .then(data => {
+              if(data.success) {
+                  alert("Usuário cadastrado com sucesso!");
+                  document.getElementById('formCadastro').reset();
+              } else {
+                  alert("Erro ao cadastrar usuário.");
+              }
+          })
+          .catch(error => {
+              console.error('Erro:', error);
+              alert("Ocorreu um erro!");
+          });
+      }
+    </script> -->
+
+    <div class="ContainerLogo2">
+      <img
+        src="images\logoMedHelperBranco.png"
+        alt="logo"
+        class="img"
+      />
+    </div>
+
+    <div class="ContainerCad center">
+      <div>
+        <h1 class="center h1-CriarConta">Criar conta</h1>
+      </div>
+
+      <div class="IrLogin center">
+        <h5>Ja possui uma conta?</h5>
+        <a href="Login.html">Fazer login. </a>
+      </div>
+
+      <div class="center" id="h2">
+        <h2>
+          Escolha como você quer <br />
+          cadastrar-se
+        </h2>
+      </div>
+
+      <div class="center" id="escolher">
+        <div class="btnContainer center">
+          <a class="btn center" id="btnServidor" href="Cadastro_Servidor.php"
+            >Servidor</a
+          >
+
+          <!-- <button class="btn" type="button" id="btnServidor">Servidor</button> -->
+        </div>
+
+        <div class="btnContainer center">
+          <a class="btn center" id="btnMedico" href="Cadastro_Medico.php"
+            >Médico</a
+          >
+
+          <!--             <button class="btn" type="button" id="btnMedico">Médico</button>
+ -->
+        </div>
+      </div>
+    </div>
+
+    <script src=""></script>
+    
+  </body>
+</html>
