@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/estilo.css" />
+
+    <title>Login do Medico</title>
+
+</head>
+
+<body>
+
+
+    <div class="ContainerLogo">
+        <img src="Assets/Images/logo-branca.png" alt="logo" class="img">
+    </div>
+
+    <div class="ContainerLog">
+        <div class="center h1-Login">
+            <h1>Login do Médico</h1>
+        </div>
+
+        <form action="login-medico.php" method="post" id="formLoginMedico">
+            <div>
+                <fieldset class="fieldset fieldsetEspacoTop fieldsetEspacoBottom">
+                    <legend class="legend">Código do Siape</legend>
+                    <input class="input input-login" type="text" name="siape" id="siape" />
+                </fieldset>
+
+                <fieldset class="fieldset">
+                    <legend class="legend">Senha</legend>
+                    <input class="input input-login" type="text" name="senha" id="senha" />
+                </fieldset>
+
+            </div>
+
+            <div class="btnContainerEntrar center" id="btnEntrar">
+                <button class="btnEntrar center" type="submit">Entrar</button>
+            </div>
+
+        </form>
+
+        <div class="AjudaSenha">
+            <a href="recuperar-senha.html">Esqueceu sua senha?</a>
+        </div>
+
+
+
+        <div class="AjudaConta center">
+            <h5>Não possui uma conta?</h5>
+            <a href="cadastro-medico.html">Criar conta. </a>
+        </div>
+
+    </div>
+    </div>
+    <script src="Assets/JS/login-medico.js"></script>
+
+</body>
+
+</html>

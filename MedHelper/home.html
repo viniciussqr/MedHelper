@@ -1,18 +1,3 @@
-<?php
-
-  session_start();
-
-  if(!isset($_SESSION['siape']) == true and (!isset($_SESSION['senha'])) == true){
-    header('Location: Login.php');
-  }
-
-
-  $_SESSION['siape'] = $siape;
-  $_SESSION['senha'] = $senha;
-  $logado = $_SESSION['siape'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,9 +16,9 @@
       </div>
 
       <div class="direita">
-        <button type="button" class="botao3 center">
+        <button id="sair-conta" type="submit" class="botao3 center">
           <img src="Assets/Images/sair.png" alt="" class="imgBotao3" />
-          <label for="" class="lblBotao3">Sair da conta</label>
+          <label id="btnLabel" for="" class="lblBotao3">Sair da conta</label>
         </button>
       </div>
     </header>
@@ -52,7 +37,7 @@
 
         <div>
           <button type="button" class="botao2 center" id="btnPerfil">
-            <img src="Assets/Images/icon-perfil.png" alt="" class="imgBotao2" />
+            <a href="perfil.php"><img src="Assets/Images/icon-perfil.png" alt="" class="imgBotao2" /></a>
             <label for="" class="lblBotao2">Perfil</label>
           </button>
         </div>
@@ -87,8 +72,7 @@
     </main>
   </div>
 
-  <script src="Assets/JS/home.js"></script>
-
+  <script src="Assets/JS/perfil.js"></script>
 </body>
 
 </html>

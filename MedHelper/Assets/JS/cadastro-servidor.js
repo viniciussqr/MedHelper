@@ -1,66 +1,70 @@
-document.getElementById('btnCriarConta').addEventListener('click', function() {
-  // Coleta os dados do formulário
-  const form = document.getElementById('StepForm');
-  const formData = new FormData(form);
+document.getElementById("formCadastroServidor").addEventListener('submit', function (event) {
+  event.preventDefault(); 
 
-  // Envia os dados para o PHP usando fetch
-  fetch('Conexao.php', {
+  const nome = document.getElementById('nome').value.trim();
+  const usuario = document.getElementById('usuario').value;
+  const email = document.getElementById('email').value.trim();
+  const telefone = document.getElementById('telefone').value.trim();
+  const siape = document.getElementById('siape').value.trim();
+  const senha = document.getElementById('senha').value;
+  const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+  if (!nome || !usuario || !email || !senha || !confirmarSenha || !telefone || !siape) {
+    alert("Por favor, preencha todos os campos!!");
+    return;
+  }
+
+  if (senha !== confirmarSenha) {
+    alert("As senhas não coincidem.");
+    return;
+  }
+
+  const formData = new FormData(); 
+  formData.append('nome', nome);
+  formData.append('usuario', usuario);
+  formData.append('email', email);
+  formData.append('senha', senha);
+  formData.append('telefone', telefone);
+  formData.append('siape', siape);
+
+  fetch('cadastro-servidor.php', {
     method: 'POST',
     body: formData
   })
-  .then(response => response.json())  // Espera uma resposta JSON
-  .then(data => {
-    if (data.success) {
-      // Se a inserção for bem-sucedida, redireciona ou exibe uma mensagem de sucesso
-      alert("Cadastro realizado com sucesso!");
-      window.location.href = "Login.html";  // Redireciona para a página de login
-    } else {
-      alert("Erro ao cadastrar. Tente novamente.");
-    }
-  })
-  .catch(error => {
-    console.error("Erro na requisição:", error);
-    alert("Ocorreu um erro. Tente novamente.");
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'sucesso') {
+        alert(data.status);
+        setTimeout(() => {
+          window.location.href = "login-servidor.html"; 
+        }, 1000);
+      } else {
+        alert(data.status);
+      }
+    })
+    .catch(error => {
+      alert(data.mensagem);
+    });
+
+    
+  
+});
+
+function toggleVisibility(buttonId, inputId) {
+  const button = document.getElementById(buttonId);
+  const input = document.getElementById(inputId);
+
+  button.addEventListener("click", () => {
+      if (input.type === "password") {
+          input.type = "text";
+          button.textContent = "🙈";
+      } else {
+          input.type = "password";
+          button.textContent = "👁️"; 
+      }
   });
-});
- 
- 
-// Adiciona o evento de envio ao formulário, não ao botão
+}
 
+toggleVisibility("toggleSenha", "senha");
+toggleVisibility("toggleConfirmarSenha", "confirmarSenha");
 
-/* document.getElementById("StepForm").addEventListener("submit", async function (event) {
-  event.preventDefault(); // Impede o envio padrão do formulário
-
-  // Captura os dados do formulário
-  const formData = new FormData(event.target);
-
-  // Opções para o Fetch API
-  const options = {
-    method: 'POST',
-    body: formData,
-  };
-
-  try {
-    // Envia os dados para o PHP
-    const response = await fetch("ConexaoCadastro.php", options);
-
-    if (!response.ok) {
-      throw new Error(`Erro: ${response.status}`);
-    }
-
-    // Lê a resposta do servidor
-    const result = await response.text();
-
-    // Tratamento da resposta
-    if (result.includes("sucesso")) {
-      alert("Cadastro realizado com sucesso!");
-      window.location.href = "Login.html"; // Redireciona para a página de login
-    } else {
-      alert(result); // Exibe o erro retornado pelo PHP
-    }
-  } catch (error) {
-    console.error("Erro ao enviar os dados:", error);
-    alert("Ocorreu um erro. Tente novamente.");
-  }
-});
- */

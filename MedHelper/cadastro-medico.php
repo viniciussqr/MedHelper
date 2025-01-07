@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['submit'])){
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
   include_once('conexao.php');
 
@@ -18,12 +18,12 @@ if(isset($_POST['submit'])){
   
 
   if(mysqli_query($mysqli, $sql)){
-      echo "Inserção realizada com sucesso.";
-      header('Location: login.html');
+    echo json_encode(['status' => 'sucesso', 'message' => 'Cadastro realizado com sucesso.']);
   }else{
-      echo "Error: (" . mysqli_error($mysqli) . ")";
+    echo json_encode(['status' => 'erro', 'message' => 'Erro ao realizar cadastro: '. mysqli_error($mysqli)]);
   }
   
+  mysqli_close($mysqli);
   exit();
   
 }
