@@ -1,0 +1,37 @@
+.header-text {
+    color: #007bff;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+    padding: 50px 40px;
+    position: relative;
+}
+
+.voltar-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+}
+
+.form-control,
+.form-select {
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.btn-outline-primary {
+    width: auto;
+}
+
+.btn-primary {
+    width: 100%;
+}
+
+body {
+    background-color: #1c1c1e;
+}

@@ -1,0 +1,91 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.logo-image {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.brand-title {
+    font-size: 1.5em;
+}
+
+.d-flex.justify-content-end .btn-primary {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.d-flex.justify-content-end .btn-md {
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 1.25em;
+    /* Aumenta a fonte do texto "Perfil" */
+}
+
+.btn-group {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* Adicionei uma margem superior aqui */
+}
+
+.btn-lg .bi {
+    font-size: 2.5rem;
+}
+
+.action-btn {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.estoque {
+    border-color: #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+}
+
+.atendimento {
+    border-color: #dc3545;
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.6);
+}
+
+.historico {
+    border-color: #ffc107;
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.6);
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+.btn-center {
+    justify-content: center;
+}
+
+.header-text {
+    color: #007bff;
+    margin-top: 5px;
+}

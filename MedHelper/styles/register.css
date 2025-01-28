@@ -1,0 +1,42 @@
+.header-text {
+    color: #007bff;
+}
+
+.form-select-custom {
+    display: inline-block;
+    width: auto;
+}
+
+.form-text-custom {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #1c1c1e;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+.logo-image {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.d-none {
+    display: none !important;
+}

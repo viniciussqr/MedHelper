@@ -8,35 +8,37 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/add-stock.css">
     <link rel="shortcut icon" href="images/logo-icon.ico" type="image/x-icon">
-    <title>MedHelper | Login</title>
+    <title>MedHelper | Adicionar ao Estoque</title>
 </head>
 
 <body class="text-center d-flex justify-content-center align-items-center" style="height: 100vh;">
     <div class="form-container p-5 rounded"
         style="box-shadow: 0 0 20px rgba(0, 123, 255, 0.5); max-width: 500px; background-color: #1c1c1e;">
+        <a href="home-server.html" class="btn btn-outline-primary mb-4 voltar-btn d-inline"><i
+                class="bi bi-arrow-left"></i> Voltar</a>
         <img src="images/logo.png" alt="Logo" class="img-fluid logo-image mb-4" style="max-width: 150px;">
-        <h2 class="header-text mb-4" style="color: #007bff;">Login</h2>
-        <form id="loginForm">
-            <input type="text" class="form-control mb-4" name="codSiape" id="codSiape" placeholder="Código do Siape"
+        <h2 class="header-text mb-4" style="color: #007bff;">Adicionar ao Estoque</h2>
+        <form id="add-stock-form">
+            <input type="text" class="form-control mb-4" id="medName" name="medName" placeholder="Nome do Medicamento"
                 required>
-            <div class="input-group mb-4">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Senha" required>
-                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
-                    <i class="bi bi-eye-slash"></i>
-                </button>
-            </div>
-            <button type="submit" class="btn btn-outline-primary btn-lg mb-4">Entrar</button>
+            <select class="form-select mb-4" id="medType" name="medType" required>
+                <option selected disabled>Tipo</option>
+                <option>Anti-inflamatório</option>
+                <option>Analgésico</option>
+                <option>Pomada</option>
+            </select>
+            <input type="number" class="form-control mb-4" id="medQuantity" name="medQuantity"
+                placeholder="Quantidade Disponível" required>
+            <button type="submit" class="btn btn-primary btn-lg mb-4">Adicionar</button>
         </form>
-        <p class="text-center">Não possui conta? <a href="register.html" class="create-account"
-                style="color: #007bff; text-decoration: underline;">Criar conta</a></p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous"></script>
-    <script src="scripts/login-script.js"></script>
+    <script src="scripts/add-stock-script.js"></script>
 </body>
 
 </html>

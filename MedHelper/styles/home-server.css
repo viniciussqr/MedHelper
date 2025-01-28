@@ -1,0 +1,87 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.logo-image {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.brand-title {
+    font-size: 1.5em;
+}
+
+.d-flex.justify-content-end .btn-primary {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.d-flex.justify-content-end .btn-md {
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 1.25em;
+    /* Aumenta a fonte do texto "Perfil" */
+}
+
+.btn-group {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-lg .bi {
+    font-size: 2.5rem;
+}
+
+.action-btn {
+    width: 230px;
+    /* Aumentei a largura */
+    height: 230px;
+    /* Aumentei a altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.adicionar-estoque {
+    border-color: #28a745;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.6);
+}
+
+.registrar-paciente {
+    border-color: #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+.btn-center {
+    justify-content: center;
+}
+
+.header-text {
+    color: #007bff;
+    margin-top: 5px;
+}
