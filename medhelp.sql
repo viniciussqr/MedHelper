@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Tempo de geração: 05/12/2024 às 14:59
+-- Tempo de geração: 20/01/2025 às 11:27
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.0.30
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,21 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `atendimentos`
---
-
-CREATE TABLE `atendimentos` (
-  `codigo` int(11) NOT NULL,
-  `status` varchar(12) NOT NULL,
-  `prontuario` varchar(500) NOT NULL,
-  `sintomas` varchar(500) NOT NULL,
-  `data` date NOT NULL,
-  `hora` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Estrutura para tabela `medicos`
 --
 
@@ -47,10 +32,41 @@ CREATE TABLE `medicos` (
   `crm` varchar(12) NOT NULL,
   `nome` varchar(200) NOT NULL,
   `email` varchar(150) NOT NULL,
-  `usuario` varchar(15) NOT NULL,
   `senha` varchar(10) NOT NULL,
   `telefone` varchar(12) NOT NULL,
   `especializacao` varchar(35) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `pacientes`
+--
+
+CREATE TABLE `pacientes` (
+  `codigo` int(11) NOT NULL,
+  `nome` varchar(250) NOT NULL,
+  `matricula` int(11) NOT NULL,
+  `genero` varchar(150) NOT NULL,
+  `idade` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `pacientes_finalizados`
+--
+
+CREATE TABLE `pacientes_finalizados` (
+  `codigo` int(11) NOT NULL,
+  `nome` varchar(250) NOT NULL,
+  `matricula` int(11) NOT NULL,
+  `genero` varchar(150) NOT NULL,
+  `idade` int(5) NOT NULL,
+  `situacao` varchar(1500) NOT NULL,
+  `medicamento` varchar(150) NOT NULL,
+  `qtd_medicamento` int(255) NOT NULL,
+  `data` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -63,8 +79,6 @@ CREATE TABLE `produtos` (
   `codigo` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
   `qtd_atual` int(11) NOT NULL,
-  `qtd_minima` int(11) NOT NULL,
-  `qtd_ideal` int(11) NOT NULL,
   `tipo_produto` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -78,7 +92,6 @@ CREATE TABLE `servidores` (
   `siape` varchar(12) NOT NULL,
   `nome` varchar(200) NOT NULL,
   `email` varchar(150) NOT NULL,
-  `usuario` varchar(15) NOT NULL,
   `senha` varchar(10) NOT NULL,
   `telefone` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -88,16 +101,22 @@ CREATE TABLE `servidores` (
 --
 
 --
--- Índices de tabela `atendimentos`
---
-ALTER TABLE `atendimentos`
-  ADD PRIMARY KEY (`codigo`);
-
---
 -- Índices de tabela `medicos`
 --
 ALTER TABLE `medicos`
   ADD PRIMARY KEY (`siape`);
+
+--
+-- Índices de tabela `pacientes`
+--
+ALTER TABLE `pacientes`
+  ADD PRIMARY KEY (`codigo`);
+
+--
+-- Índices de tabela `pacientes_finalizados`
+--
+ALTER TABLE `pacientes_finalizados`
+  ADD PRIMARY KEY (`codigo`);
 
 --
 -- Índices de tabela `produtos`
@@ -116,9 +135,15 @@ ALTER TABLE `servidores`
 --
 
 --
--- AUTO_INCREMENT de tabela `atendimentos`
+-- AUTO_INCREMENT de tabela `pacientes`
 --
-ALTER TABLE `atendimentos`
+ALTER TABLE `pacientes`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de tabela `pacientes_finalizados`
+--
+ALTER TABLE `pacientes_finalizados`
   MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
